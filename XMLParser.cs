@@ -12,8 +12,8 @@ namespace Company.Function
       XmlDocument doc = new XmlDocument();
       doc.PreserveWhitespace = false;
       var binDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-      var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../../../files/"));
-      // var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../files/"));
+      // var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../../../files/"));
+      var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../files/"));
       doc.Load(rootDirectory + "/service_list.xml");
       XmlNodeList elemList = doc.GetElementsByTagName("entry");
       List<ServiceDiagram> diagrams = new List<ServiceDiagram>();

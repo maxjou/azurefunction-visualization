@@ -68,8 +68,8 @@ namespace Company.Function
     public static string Run(string dot)
     {
       var binDirectory = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-      var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../../../files/"));
-      // var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../files/"));
+      // var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../../../files/"));
+      var rootDirectory = Path.GetFullPath(Path.Combine(binDirectory, "../../files/"));
       string executable = @rootDirectory + "dot.exe";
       string output = @rootDirectory + "tempGraph";
 
